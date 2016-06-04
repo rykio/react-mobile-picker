@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -25,11 +26,12 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.js$/, loader: 'babel', exclude: /node_modules/},
-      {test: /\.less$/, loader: 'style!css!autoprefixer!less'}
+      {test: /\.less$/, loader: ExtractTextPlugin.extract('style-loader','css!autoprefixer!less')}
     ]
   },
 
   plugins: [
+    new ExtractTextPlugin('styles.css'),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
