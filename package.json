@@ -1,11 +1,11 @@
 {
-  "name": "react-mobile-picker",
-  "version": "0.1.10",
-  "description": "An iOS like select box component for React",
+  "name": "react-picker",
+  "version": "0.1.0",
+  "description": "An iOS like select box component for React. Forked from adcentury's react-mobile-picker",
   "main": "lib/react-mobile-picker.js",
   "repository": {
     "type": "git",
-    "url": "adcentury/react-mobile-picker"
+    "url": "rykio/react-mobile-picker"
   },
   "dependencies": {
     "react": "^0.14.3",
